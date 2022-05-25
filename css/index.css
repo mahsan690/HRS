@@ -806,7 +806,48 @@ header .clientsdashboard
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
+header .clientsdashboard .forClient
+{
+    position: absolute;
+    top: 60px;
+    left: -75px;
+    width: 350px;
+    height: 455px;
+    background-color: black;
+    z-index: 1000000;
+    display: flex;
+    padding: 20px;
+}
+header .clientsdashboard h3:hover + .forClient
+{
+    display: flex;
+}
+header .clientsdashboard .forClient .forclientcard
+{
+    width: 100%;
+    height: 85px;
+    border: 1px solid white;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+header .clientsdashboard .forClient .forclientcard h2
+{
+    font-size: 1em;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    color: white;
+}
+header .clientsdashboard .forClient .forclientcard h2 span img
+{
+    width: 30px;
+    height: 30px;
+}
+
 header .clientsdashboard button
 {
     /* width: 20px; */
@@ -861,9 +902,13 @@ header .clientsdashboard h3:hover span img
 .banner .klasimg
 {
     position: absolute;
-    top: 20px;
-    right: 10px;
+    top: 50px;
+    right: 20px;
     z-index: 10000;
+}
+.banner .klasimg img
+{
+    width: 200px;
 }
 .banner .leftside
 {
@@ -1032,7 +1077,7 @@ header .clientsdashboard h3:hover span img
 .clinicalwebinar
 {
     width: 100%;
-    height: 53vh;
+    height: 55vh;
     background-color: #44444418;
     padding: 20px;
     display: flex;
@@ -1042,7 +1087,7 @@ header .clientsdashboard h3:hover span img
 .clinicalwebinar .visitmodel
 {
     width: 60%;
-    height: 100%;
+    height: 90%;
     border-radius: 10px;
     overflow: hidden;
     display: flex;
@@ -1147,7 +1192,7 @@ header .clientsdashboard h3:hover span img
 .clinicalwebinar .eguide
 {
     width: 39%;
-    height: 100%;
+    height: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1156,10 +1201,13 @@ header .clientsdashboard h3:hover span img
 .clinicalwebinar .eguide .top
 {
     width: 100%;
-    height: 210px;
+    /* height: 180px; */
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
 }
 .clinicalwebinar .eguide .top h4
 {
@@ -1292,6 +1340,42 @@ header .clientsdashboard h3:hover span img
 .whychosehrs button:hover
 {
     background-color: #7d227a;
+}
+.counter
+{
+    width: 100%;
+    padding: 50px;
+    margin-top:20px;
+    background-color: #44444415;
+}
+.counter .counterBoxes
+{
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 4px solid #1d4c84;
+    border-radius: 10px;
+    background-color: #44444413;
+}
+.counter .counterBox
+{
+    width: 250px;
+    text-align: center;
+    padding: 10px;
+    /* background-color:red ; */
+}
+.counter .counterBox .top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.counter .counterBox .top h2
+{
+    margin-right: 10px;
+    font-size: 2.5em;
+    color: #1d4c84;
+    margin-bottom: 10px;
 }
 .howwehelp
 {
@@ -1479,6 +1563,17 @@ header .clientsdashboard h3:hover span img
     color: #1d4c84;
     font-size: 2em;
     text-transform: capitalize;
+    position: relative;
+}
+.reimbursment .reimbursmentleftside h1::before
+{
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 4px;
+    bottom: -12px;
+    background-color: #7d227a;
+    border-radius: 2px;
 }
 .reimbursment .reimbursmentleftside p
 {
@@ -1528,7 +1623,7 @@ header .clientsdashboard h3:hover span img
     align-items: center;
     flex-direction: column;
     padding: 20px;
-    /* background-color: #1d4c84; */
+    background-color: #44444408;
 }
 .reimbursment .reimbursmentrightside h1
 {
@@ -1577,5 +1672,331 @@ header .clientsdashboard h3:hover span img
 {
     font-size: 15px;
     color: #444444;
-    line-height: ;
+    line-height:24px ;
+    padding: 10px;
+    text-align: left;
+    margin-top: 20px;
 }
+.reimbursment .reimbursmentrightside h5
+{
+    color: #444444;
+    text-align: left;
+    margin-right: 200px;
+    margin-top: 30px;
+}
+.clientsaying
+{
+    width: 100%;
+    height: 70vh;
+    /* background-color: #1d4c84; */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.clientsaying .clientsayingleftside
+{
+    width: 48%;
+    height: 100%;
+    /* background-color: #444444; */
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    flex-direction: column;
+}
+.clientsaying .clientsayingleftside h1
+{
+    font-size: 2.5em;
+    text-transform: capitalize;
+    color: #1d4c84;
+}
+.clientsaying .clientsayingrightside
+{
+    width: 50%;
+    height: 100%;
+    /* background-color: #222; */
+    /* padding: 40px; */
+    padding: 0px 30px;
+}
+.clientsaying .clientsayingrightside .form
+{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background-color: #4444441a;
+    border-radius: 10px;
+    margin-left: 50px;
+    padding: 10px;
+}
+.clientsaying .clientsayingrightside .form h2
+{
+    /* font-size: 20px; */
+    color: #1d4c84;
+    text-transform: capitalize;
+}
+.clientsaying .clientsayingrightside .form .forminput
+{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.clientsaying .clientsayingrightside .form .forminput input
+{
+    width: 100%;
+    height: 50px;
+    border: 0.5px solid #44444459;
+    margin: 5px 0px;
+    padding: 6px;
+    border-radius: 8px;
+}
+.clientsaying .clientsayingrightside .form p
+{
+    font-size: 12px;
+    font-weight: 500;
+    /* width: 500px; */
+    text-align: center;
+    /* width: 85%; */
+    text-transform: capitalize;
+    color: #444444;
+}
+.clientsaying .clientsayingrightside .form button
+{
+    font-size: 18px;
+    padding: 12px;
+    outline: none;
+    border: none;
+    background-color: #92278f;
+    color: #fff;
+    border-radius: 10px;
+    text-transform: capitalize;
+    transition-duration: 0.4s;
+}
+.clientsaying .clientsayingrightside .form button:hover
+{
+    background-color: #7d227a;
+}
+footer
+{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 10px;
+    flex-wrap: wrap;
+    background-color: #1d4c84;
+    margin-top: 30px;
+}
+footer .content
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-wrap: wrap;
+    flex-direction: row; */
+}
+footer .content .hrsfooter
+{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 40px;
+    padding: 20px;
+    /* background-color: red; */
+}
+footer .content .hrsfooter img
+{
+    width: 230px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+footer .content .hrsfooter .icons
+{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: red; */
+}
+footer .content .hrsfooter .icons img
+{
+    width: 35px !important;
+    height: 35px !important;
+    /* filter: invert(0); */
+}
+footer .content .sect
+{
+    margin-right: 30px;
+    /* background-color: red; */
+}
+footer .content .aboutus
+{
+    width: 100%;
+}
+footer .content h2
+{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+footer .content h2::before
+{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition-duration: 0.4s;
+}
+footer .content h2:hover::before
+{
+    width: 100%;
+}
+
+footer .content .quicklinks
+{
+    position: relative;
+    /* width: 25%; */
+    /* padding: 0px 20px; */
+    /* background-color: ; */
+}
+footer .content .quicklinks ul li
+{
+    list-style: none;
+}
+footer .content .quicklinks ul li a 
+{
+    color: #999;
+    display: inline-block;
+    text-decoration: none;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+footer .content .quicklinks ul li a:hover
+{
+    color: #fff;
+}
+/* footer .content .contactus
+{
+    width: calc(35% - 60px);
+    margin-right: 0 !important;
+}
+footer .content .contactus ul
+{
+    position: relative;
+}
+footer .content .contactus ul li
+{
+    display: flex;
+    margin-bottom: 20px;
+    list-style: none;
+}
+footer .content .contactus ul li span
+{
+    color: #999;
+}
+footer .content .contactus ul li span:nth-child(1)
+{
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+footer .content .contactus ul li a
+{
+    color: #999;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+footer .content .contactus ul li a:hover
+{
+    color: #fff;
+} */
+.copyright
+{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #1d4c84;
+    padding: 5px 10px;
+}
+.copyright p
+{
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #999;
+}
+.copyright p a
+{
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+}
+.copyright p a:hover
+{
+    color: rgb(255, 0, 76);
+}
+/* @media (max-width: 1000px)
+{
+    footer
+    {
+        padding: 40px;
+    }
+    footer .content
+    {
+        flex-direction: column;
+    }
+    footer .content .sect 
+    {
+        margin-right: 30px;
+        margin-bottom: 20px;
+    }
+    footer .content .aboutus 
+    {
+        width: 100%;
+    }
+    footer .content .quicklinks 
+    {
+        width: 100%;
+        padding: 0;
+    }
+    footer .content .contactus 
+    {
+        width: 100%;
+    }
+    .copyright
+    {
+        padding: 0;
+    }
+    .copyright p
+    {
+        font-size: 14px;
+    }
+    .copyright p a
+    {
+        font-size: 12px;
+    } */
+/* .clientsaying .clientsayingleftside .owlcard
+{
+    background-color: white;
+    height: 300px;
+    width: 800px;
+} */
+
+
